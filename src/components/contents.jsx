@@ -29,6 +29,7 @@ export default class Content extends Component {
       // 깊은 복사 : 여러항목을 입력 하면  [{…}, {…}, {…}, ...] 으로 노출됨 
       // 데이터가 복사가 아닌 참조 / 똑같은 데이터 생성
       textArray.push(<TodoListItem 
+        // eslint-disable-next-line react/no-direct-mutation-state
         id={this.state.itemNum++} // props로 식별을 위한 itemNum
         text={inputText.value} 
         delete={(num)=>{this.deleteItem(num)}} />)
